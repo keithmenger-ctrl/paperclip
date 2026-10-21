@@ -1,0 +1,227 @@
+schema: paperclip/v1
+agents:
+  head-of-software:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  coachub-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  mps-app-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  jiu-jitsu-studio-os-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  academyos-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  pdf-program-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  hr-app-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  outlier-health-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  coach-os-website-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  coach-os-sos-builder:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+  youth-performance-planner:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-5-5
+    inputs:
+      env:
+        LINEAR_API_KEY:
+          kind: secret
+          requirement: optional
+routines:
+  head-of-software-review-sweep:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "50 * * * *"
+        timezone: America/Los_Angeles
+  daily-summary-for-keith:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "53 5 * * *"
+        timezone: America/Los_Angeles
+  coachub-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "5 * * * *"
+        timezone: America/Los_Angeles
+  mps-app-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "10 * * * *"
+        timezone: America/Los_Angeles
+  jiu-jitsu-studio-os-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "15 * * * *"
+        timezone: America/Los_Angeles
+  academyos-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "20 * * * *"
+        timezone: America/Los_Angeles
+  pdf-program-builder-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "25 * * * *"
+        timezone: America/Los_Angeles
+  hr-app-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "30 * * * *"
+        timezone: America/Los_Angeles
+  outlier-health-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "35 * * * *"
+        timezone: America/Los_Angeles
+  coach-os-website-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "40 * * * *"
+        timezone: America/Los_Angeles
+  coach-os-sos-select-build-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "45 * * * *"
+        timezone: America/Los_Angeles
+  youth-performance-facility-planning-loop:
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        cronExpression: "12 9 * * *"
+        timezone: America/Los_Angeles
