@@ -5,19 +5,7 @@ agents:
       type: claude_local
       config:
         model: claude-opus-5-5
-    inputs:
-      env:
-        GH_TOKEN:
-          kind: secret
-          requirement: optional
-        LINEAR_API_KEY:
-          kind: secret
-          requirement: optional
-  coachub-builder:
-    adapter:
-      type: claude_local
-      config:
-        model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -31,6 +19,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -44,6 +33,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -57,6 +47,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -70,6 +61,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -83,6 +75,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -96,6 +89,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -109,6 +103,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -122,6 +117,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         GH_TOKEN:
@@ -135,6 +131,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-5-5
+        engine: cli
     inputs:
       env:
         LINEAR_API_KEY:
@@ -154,13 +151,6 @@ routines:
     triggers:
       - kind: schedule
         cronExpression: "53 5 * * *"
-        timezone: America/Los_Angeles
-  coachub-build-loop:
-    concurrencyPolicy: skip_if_active
-    catchUpPolicy: skip_missed
-    triggers:
-      - kind: schedule
-        cronExpression: "5 * * * *"
         timezone: America/Los_Angeles
   mps-app-build-loop:
     concurrencyPolicy: skip_if_active

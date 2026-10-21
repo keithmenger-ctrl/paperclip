@@ -4,7 +4,6 @@ description: Head of Software and the per-project builders
 slug: software-dev
 manager: ../../agents/head-of-software/AGENTS.md
 includes:
-  - ../../agents/coachub-builder/AGENTS.md
   - ../../agents/mps-app-builder/AGENTS.md
   - ../../agents/jiu-jitsu-studio-os-builder/AGENTS.md
   - ../../agents/academyos-builder/AGENTS.md
@@ -20,4 +19,4 @@ tags:
   - engineering
 ---
 
-The Head of Software manages ten builders, one per active KMLLC project. The team can be imported on its own under an existing KMLLC manager, such as the Chief of Staff.
+The Head of Software manages nine builders, one per active KMLLC project. The team can be imported on its own under an existing KMLLC manager, such as the Chief of Staff.

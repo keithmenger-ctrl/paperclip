@@ -2,7 +2,7 @@
 
 The engineering department for KMLLC: one **Head of Software** who manages one builder per active product. Builders ship branches, the Head of Software reviews everything, and **nothing deploys without Keith's thumbs-up.**
 
-It is built from the *Build spec: Software Dev Team (Oct 21, 2026)* update on the [Paperclip AI Operating Team](https://linear.app/kmllc/project/paperclip-ai-operating-team-bcaf58d78426) project in Linear.
+It is built from the *Build spec: Software Dev Team (Oct 21, 2026)* update and the follow-up that sets CoacHub aside, on the [Paperclip AI Operating Team](https://linear.app/kmllc/project/paperclip-ai-operating-team-bcaf58d78426) project in Linear.
 
 ## How it works
 
@@ -17,7 +17,6 @@ It is built from the *Build spec: Software Dev Team (Oct 21, 2026)* update on th
 | Agent | Title | Reports to | Owns | Model |
 | --- | --- | --- | --- | --- |
 | `head-of-software` | Head of Software | Keith (board) | The team, reviews, the summary | Opus 5.5 |
-| `coachub-builder` | Builder | Head of Software | CoacHub (high priority; repo TBD) | Sonnet 5.5 |
 | `mps-app-builder` | Builder | Head of Software | MPS App / KM Trainer + MPS Backend | Sonnet 5.5 |
 | `jiu-jitsu-studio-os-builder` | Builder | Head of Software | Jiu-Jitsu Studio OS | Sonnet 5.5 |
 | `academyos-builder` | Builder | Head of Software | AcademyOS (generic shell only) | Sonnet 5.5 |
@@ -28,9 +27,9 @@ It is built from the *Build spec: Software Dev Team (Oct 21, 2026)* update on th
 | `coach-os-sos-builder` | Builder | Head of Software | Coach OS Chassis, SOS Select 9U MVP, SOS Select Phase 2 | Sonnet 5.5 |
 | `youth-performance-planner` | Planner | Head of Software | Youth Performance + Tutoring Facility (plan only) | Sonnet 5.5 |
 
-All agents run on Claude Code (`claude_local`). They also use the `paperclip` skill.
+All agents run on Claude Code (`claude_local`) using the CLI engine, so they use the Claude Code installed on the Mac (keep it current with `claude update`). They also use the `paperclip` skill.
 
-**No builder (archived or scrapped):** Coach App Mold, Kin, Menger Finance, Fractional Fitness Ops site, MPS Brand OS, Jarvis, /am Debrief.
+**No builder:** CoacHub (set aside for now). Archived or scrapped: Coach App Mold, Kin, Menger Finance, Fractional Fitness Ops site, MPS Brand OS, Jarvis, /am Debrief.
 
 ## Getting started
 
@@ -50,7 +49,7 @@ After import:
 
 1. Agents and routines arrive **paused** (Paperclip's import safety default). Review them in the UI.
 2. Add `GH_TOKEN` and `LINEAR_API_KEY` as Paperclip secrets for the agents.
-3. Set monthly budgets. With 11 agents waking hourly, this is the main cost lever.
+3. Set monthly budgets. With 10 agents waking hourly, this is the main cost lever.
 4. Resume the Head of Software first. Its "Stand up the team" task maps each builder to a repo and sends you one list of the access it still needs.
 5. Resume the builders whose repos are ready.
 
